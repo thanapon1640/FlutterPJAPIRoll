@@ -1,0 +1,20 @@
+
+{
+    "coins": [
+        {
+            "uuid": "Qwsogvtv82FCd",
+            "symbol": "BTC",
+            "name": "Bitcoin",
+            "color": "#f7931A",
+            "iconUrl": "https://cdn.coinranking.com/bOabBYkcX/bitcoin_btc.svg",
+            "price": "29013.60499184727",
+            "tier": 1,
+            "change": "-0.72",
+            "rank": 1,
+            "lowVolume": false,
+            "coinrankingUrl": "https://coinranking.com/coin/Qwsogvtv82FCd+bitcoin-btc",
+            "24hVolume": "9244700063",
+            "btcPrice": "1"
+        }
+    ]
+}
