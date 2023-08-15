@@ -1,9 +1,7 @@
-import 'dart:developer';
 
 import 'package:get/get.dart';
 
 import 'package:flutter/material.dart';
-import 'package:projectapi/service/api_service.dart';
 
 class TestApi extends StatefulWidget {
   const TestApi({super.key});
@@ -17,12 +15,12 @@ class _TestApiState extends State<TestApi> {
 
   @override
   Widget build(BuildContext context) {
-    ApiService().getThreeTopCoins().then((value) {
-      log(value![1].name);
-    });
+   // ApiService().getThreeTopCoins();
 
     return Scaffold(
-      body: Container(),
+      body: Container(
+        
+      ),
     );
   }
 }

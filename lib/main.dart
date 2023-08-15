@@ -1,23 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:projectapi/binding/root_binding.dart';
 import 'package:projectapi/pages/home_page.dart';
 import 'package:projectapi/pages/test_api.dart';
 
 void main(List<String> args) {
-  runApp(const MyApp());
+  runApp( MyApp());
 }
 
 class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+   MyApp({super.key});
 
   @override
-  State<MyApp> createState() => _MyAppState();
+  State<MyApp> createState() => MyAppState();
 }
 
-class _MyAppState extends State<MyApp> {
+class MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
+      // initialBinding: RootBinding(),
+      // initialRoute: '/',
+      // getPages: [
+      //   GetPage(name: '/', page: ()=>HomePage()),
+      // ],
       home: HomePage(),
     );
   }

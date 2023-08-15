@@ -1,25 +1,30 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:projectapi/service/api_service.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
-
+  HomePage({super.key});
+ 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<HomePage> createState() => HomePageState();
 }
 
-class _HomePageState extends State<HomePage> {
-  @override
+class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
+    
+ final ApiService apiService = Get.put(ApiService().topthreesList as ApiService);
     return Scaffold(
       body: SafeArea(
         child: Column(
           children: [
-            const SizedBox(height: 30),
+            SizedBox(height: 30),
             Container(
               padding: const EdgeInsets.symmetric(horizontal: 15.0),
               decoration: const BoxDecoration(),
               child: TextField(
                 decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.blueGrey[50],
                   hintText: 'Search',
                   prefixIcon: IconButton(
                     icon: const Icon(Icons.search),
@@ -31,7 +36,7 @@ class _HomePageState extends State<HomePage> {
                 ),
               ),
             ),
-            const Padding(
+            Padding(
               padding: EdgeInsets.symmetric(horizontal: 15.0, vertical: 15),
               child: Row(
                 children: [
@@ -136,7 +141,7 @@ class _HomePageState extends State<HomePage> {
                                 Color.fromARGB(255, 211, 159, 107)),
                         SizedBox(height: 8),
                         Text(
-                          "BTC",
+                          " BTC",
                           style: TextStyle(
                               fontSize: 18, fontWeight: FontWeight.bold),
                         ),
@@ -169,8 +174,10 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.all(10.0),
+              padding: const EdgeInsets.fromLTRB(15, 10, 15, 10),
               child: Row(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Column(
                     children: [
